@@ -1,0 +1,163 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{article} % Default font size and paper size
+
+\usepackage{multicol}
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+% To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\par{\centering{\Huge Dennis \textsc{Moore}}\bigskip\par} % Your name
+
+\section{Personal Data}
+
+\begin{tabular}{rl}
+\textsc{Place and Date of Birth:} & Bakersfield, CA  | 03 September 1993 \\
+\textsc{Address:} & 2551 West Villa Maria Road, Apartment 1012, Bryan, TX, 77807 \\
+\textsc{Phone:} & 281 608 9655\\
+\textsc{email:} & denmoore93@gmail.com
+\end{tabular}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{tabular}{rl}	
+\textsc{December} 2015 & Bachelor of Science in \textsc{Electrical Engineering}, \textbf{Texas A \& M University}\\
+
+&\\
+
+%------------------------------------------------
+
+\textsc{May} 2011& Graduated in the top 10\% in a class of 600 students\\
+& \textbf{Kingwood High School}\\
+
+\end{tabular}
+
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE 
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+\begin{tabular}{r|p{11cm}}
+\textsc{June 2015 - Current} & \emph{SOE}\\
+& \footnotesize{I wrote embedded C code for the TI Piccolo processor to communicate with an Arduino Uno via SPI. These two devices operate at different
+voltages (3.3 and 5V) so I had to design a level shifter to get them to communicate properly. I also implemented error checking on both processors to
+throw away packets with incorrect data.}\\
+\multicolumn{2}{c}{} \\
+
+%------------------------------------------------
+
+\textsc{August 2014 - May 2015} & \emph{AggiE Challenge}\\
+& \footnotesize{I volunteered for a project to create an autonomous UAV that explored and mapped an unknown environment. For this project we used a Raspberry PI running ROS to host our flight control system, and an arduino for accessing and filtering sensor data. I was responsible for interfacing the hardware and sensors, setting up the ROS environment on the Pi, and handling wireless communication. I also helped to create the autonomous control system.}\\
+\multicolumn{2}{c}{} \\
+
+%------------------------------------------------
+
+\textsc{May 2013 - July 2014} & \emph{AMBER Robotics Lab}\\
+& \footnotesize{I worked under the supervision of Dr. Ames on developing an autonomous cruise controller for cars and a hardware system to test the cruise controller. The cruise controller utilized non-linear control theory and was written in C, while the hardware system was an electric RC car with a UDOO microcontroller and arduino on top of it. ROS (Robot Operating System) was placed on the UDOO so that it could act as the motherboard, and the arduino was used to read in and filter sensor data then send it to the UDOO.}\\
+\multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+
+%----------------------------------------------------------------------------------------
+%	Extracurricular Activities
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	Relevant Course Work
+%----------------------------------------------------------------------------------------
+
+\section{Relevant Course Work}
+
+\begin{tabular}{rl}
+\textsc{Electronics:} & Linear Control Systems, RF and Microwave Wireless Systems, \\
+& Microwave Circuits and Systems, Optical Communication Systems, \\
+ 
+
+\textsc{Programming:} & Microprocessor Systems Design(C and Verilog), DSP Based Electro- \\ 
+& Mechanical Motion(C), Computer Architecture(MIPS Assembly and Verilog) \\
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	Key Skills
+%----------------------------------------------------------------------------------------
+
+\section{Key Skills}
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item C/C++
+    \item Python
+    \item Verilog
+    \item Microcontrollers
+    \item Linux
+    \item Digital Signal Processing
+
+\end{itemize}
+\end{multicols}
+
+
+
+%----------------------------------------------------------------------------------------
+
+
+\end{document}

@@ -1,0 +1,218 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{#2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\myResumeSubheading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.5\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small#2} \\
+      %\textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://github.com/dennis-moore}{\Large Dennis Moore}} & Email : \href{mailto:denmoore93@gmail.com}{denmoore93@gmail.com}\\
+  \href{https://github.com/dennis-moore}{https://github.com/dennis-moore} & Mobile : 281-608-9655 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Texas A \& M University}{College Station, TX}
+      {Bachelor of Science in Electrical and Computer Engineering}{Aug. 2011 -- Dec. 2015}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {SOE}{Houston, TX}
+      {Embedded Software Engineer}{May 2018 - Present}
+      \resumeItemListStart
+        \resumeItem{}
+          {Optimized large C code base to minimize code size, improve performance and remove warnings. Reduced code size by 25\%, build time by a factor of 6 and removed 40,000+ warnings.}
+        \resumeItem{}
+          {Fixed C makefile to cross-compile code with the ARM GCC toolchain inside a Docker container.}
+		\resumeItem{}
+          {Developed Python scripts to integrate with Unix tools(nm, readelf, map file) and generate metrics on the code base. Added these tools to the Docker + Gitlab CICD environment to auto-generate metrics upon successful build.}
+		\resumeItem{}
+          {Improved performance of the eCompass by increasing the RTOS task rate and sensor update rate, and adding low-pass digital filters. Configured accelerometer and magnetometer sensors over I2C.}
+        \resumeItem{}
+          {Updated a unit test project to receive and log sensor data from an embedded device over the serial port. This data was analyzed and documented with Jupyter Notebooks, and used to design the low-pass filters for the eCompass.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Cognizant Technology Solutions}{Dallas, TX}
+      {Software Engineer}{Jan 2016 - April 2018}
+      \resumeItemListStart
+        \resumeItem{}
+          {Worked in an Agile environment to design, develop, and test production software. Developed and maintained various Java, Python and C\# applications that were used across many teams.}
+        \resumeItem{}
+          {Developed multiple Java applications that utilized REST APIs to improve upon and add features to our CICD environment.}
+        \resumeItem{}
+          {Maintained Windows virtual machines running Jenkins used for regression testing and CICD. Developed Java and Python code to automate parts of deploying new VMs. Provided VM support during production deployments.}
+        \resumeItem{}
+          {Created a couple of C\# web apps hosted internally on a Windows VM with IIS. Both applications used .NET, Bootstrap, Javascript and MySQL.}
+        \resumeItem{}
+          {Constantly learned new technologies and worked on new ways to enhance the Selenium and TestNG testing framework through software innovations. Wrote a Java application to speed up regression execution, and improve testing coverave and efficiency.}
+        \resumeItem{}
+          {Gave presentations and lead training sessions on the applications I built, framework enhancements I made, and our current technology stack.}
+		\resumeItem{}
+          {Supervised team and lead regressions during my boss’s absence. Interviewed candidates for open positions to assess their technical ability.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {SOE}{Houston, TX}
+      {Embedded Software Engineer Intern}{Summer 2015}
+      \resumeItemListStart
+        \resumeItem{}
+          {Defined a low level interface between two processors (TI C2000 and Arduino) to allow for SPI communication between the devices. Designed a level shifter to match their voltages(3.3V and 5V). Implemented error checking to throw away bad data packets.}
+		\resumeItem{}
+          {Researched and experimented with CAN bus communication between a Raspberry Pi and TI C2000.}
+		\resumeItem{}
+          {Wrote Python code to plot magnetometer data coming over serial port.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {AMBER Robotics Lab}{College Station, TX}
+      {Student Researcher}{May 2013 - July 2014}
+      \resumeItemListStart
+        \resumeItem{}
+          {I proposed a hardware system to test a nonlinear, autonomous cruise control system for cars that was being simulated in MATLAB. The idea was to port the control system to an Arduino, and use the Arduino to control the Servos of a gas powered RC car. This allowed the simulation and theory to be tested on hardware in the real world.}
+        \resumeItem{}
+          {Interfaced optical encoders with the Arduino over I2C and used these to compute wheel velocity. Applied a digital filter to this.}
+		\resumeItem{}
+          {Helped with the electrical design(microcontroller and sensors). Wrote a portion of the control system to feedback wheel velocity based on the encoder readings and drive the motors with PWM signals.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+  
+    \myResumeSubheading
+      {NCOB: }{Spring Java web application for connecting and remotely controlling robots through an online interface}
+	  \resumeItemListStart    
+        \resumeItem{}
+          {Frontend created with HTML, CSS, jQuery and Thymeleaf. Backend created with Spring MVC and MongoDB. Deployed with Docker and Gradle.}
+        \resumeItem{}
+          {C client code uses ZeroMQ to communicate with JeroMQ message broker on the web server. Google protocol buffers are used for message serialization.}
+	  \resumeItemListEnd
+	  
+	\myResumeSubheading
+      {AggiE-Challenge: }{Autonomous UAV that explored and mapped an unknown environment}
+	  \resumeItemListStart    
+        \resumeItem{}
+          {Setup Robot Operating System (ROS) environment on the Raspberry Pi. Developed TCP socket code in Python to communicate between the Pi and a host machine. Later added ROS to the host machine to ease wireless communication and add SLAM capabilities.}
+        \resumeItem{}
+          {Interfaced ArduPilot flight control system with the high level control system on the Pi over Serial. Developed control system on the Pi to relay sensor data from the ArduPilot to the relevant ROS nodes, switch between flight modes (altitude control, etc.), and drive the quadcopter with user input.}
+        \resumeItem{}
+          {Wrote device driver in C to interface Lidar sensor with the Pi. Later ported to ROS to ease integration with the rest of the system.}
+        \resumeItem{}
+          {Developed Python code using OpenCV to visualize real time IMU data as a 3D cube to represent the attitude of the quadcopter. This was used to analyze the IMU and design a filter.}
+	  \resumeItemListEnd
+	  
+	\myResumeSubheading
+      {Senior Design: }{Microcontroller system for cars designed to monitor the environment and driver vitals}
+	  \resumeItemListStart    
+        \resumeItem{}
+          {Wrote serial communication drivers in Python and C to communicate between processors. Implemented memory mapped IPC to communicate between processes.}
+        \resumeItem{}
+          {Sampled EKG sensor with ADC and processed and filtered digital signal to determine heart rate information. Interfaced with LiDAR sensor over I2C to receive distance information for the control system.}
+		\resumeItem{}
+          {Developed a control system based on kinematic equations and EKG and LiDAR sensor inputs to send commands and alerts over the serial link to the bluetooth interface.}
+	  \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+%\section{Skills}
+%  \resumeSubHeadingListStart
+%    \item{
+%      \textbf{Languages}{: Java, Python, C, Javascript, C\#}
+%      \hfill
+%      \textbf{Technologies}{: Spring, MongoDB, Docker, Maven/Gradle, Jenkins}
+%    }
+%  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
