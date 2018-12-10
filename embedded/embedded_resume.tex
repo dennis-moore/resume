@@ -27,8 +27,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1in}
 
 \urlstyle{same}
 
@@ -38,31 +38,31 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-7pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{#2 \vspace{-2pt}}
+    \textbf{#1}{#2 \vspace{-3pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\myResumeSubheading}[2]{
-  \vspace{-1pt}\item
+  \vspace{-2pt}\item
     \begin{tabular*}{0.5\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textit{\small#2} \\
       %\textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
@@ -71,8 +71,8 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -109,11 +109,11 @@
         \resumeItem{}
           {Fixed C makefile to cross-compile code with the ARM GCC toolchain inside a Docker container.}
 		\resumeItem{}
-          {Developed Python scripts to integrate with Unix tools(nm, readelf, map file) and generate metrics on the code base. Added these tools to the Docker + Gitlab CICD environment to auto-generate metrics upon successful build.}
+          {Developed Python scripts to integrate with Unix tools and generate metrics on the code base. Added these tools to the Docker + Gitlab CICD environment to auto-generate metrics every build.}
 		\resumeItem{}
-          {Improved performance of the eCompass by increasing the RTOS task rate and sensor update rate, and adding low-pass digital filters. Configured accelerometer and magnetometer sensors over I2C.}
+          {Improved performance of navigation system in embedded RTOS environment. Configured sensors over I2C.}
         \resumeItem{}
-          {Updated a unit test project to receive and log sensor data from an embedded device over the serial port. This data was analyzed and documented with Jupyter Notebooks, and used to design the low-pass filters for the eCompass.}
+          {Updated project to log data over the serial port. Analyzed data with Jupyter Notebooks to design low-pass filters.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -123,17 +123,13 @@
         \resumeItem{}
           {Worked in an Agile environment to design, develop, and test production software. Developed and maintained various Java, Python and C\# applications that were used across many teams.}
         \resumeItem{}
-          {Developed multiple Java applications that utilized REST APIs to improve upon and add features to our CICD environment.}
+          {Developed multiple Java applications that utilized REST APIs to improve upon our CICD environment.}
         \resumeItem{}
           {Maintained Windows virtual machines running Jenkins used for regression testing and CICD. Developed Java and Python code to automate parts of deploying new VMs. Provided VM support during production deployments.}
         \resumeItem{}
-          {Created a couple of C\# web apps hosted internally on a Windows VM with IIS. Both applications used .NET, Bootstrap, Javascript and MySQL.}
+          {Created a couple C\# web apps hosted internally on a Windows VM. Both apps used .NET, Javascript and MySQL.}
         \resumeItem{}
-          {Constantly learned new technologies and worked on new ways to enhance the Selenium and TestNG testing framework through software innovations. Wrote a Java application to speed up regression execution, and improve testing coverage and efficiency.}
-        \resumeItem{}
-          {Gave presentations and lead training sessions on the applications I built, framework enhancements I made, and our current technology stack.}
-		\resumeItem{}
-          {Supervised team and lead regressions during my boss’s absence. Interviewed candidates for open positions to assess their technical ability.}
+          {Worked on new ways to enhance the Selenium and TestNG testing framework through software innovations. Wrote a Java application to speed up regression execution, and improve testing coverage and efficiency.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -141,11 +137,11 @@
       {Embedded Software Engineer Intern}{Summer 2015}
       \resumeItemListStart
         \resumeItem{}
-          {Defined a low level interface between two processors (TI C2000 and Arduino) to allow for SPI communication between the devices. Designed a level shifter to match their voltages(3.3V and 5V). Implemented error checking to throw away bad data packets.}
+          {Defined a low level interface between two processors to allow for SPI communication between the devices. Designed a level-shifter to match their voltages. Implemented error checking to throw away bad packets.}
 		\resumeItem{}
           {Researched and experimented with CAN bus communication between a Raspberry Pi and TI C2000.}
 		\resumeItem{}
-          {Wrote Python code to plot magnetometer data coming over serial port.}
+          {Wrote Python code to plot real-time magnetometer data coming over serial port.}
       \resumeItemListEnd
       
     \resumeSubheading
@@ -153,9 +149,9 @@
       {Student Researcher}{May 2013 - July 2014}
       \resumeItemListStart
         \resumeItem{}
-          {I proposed a hardware system to test a nonlinear, autonomous cruise control system for cars that was being simulated in MATLAB. The idea was to port the control system to an Arduino, and use the Arduino to control the Servos of a gas powered RC car. This allowed the simulation and theory to be tested on hardware in the real world.}
+          {Proposed a hardware system to test a nonlinear cruise controller. The idea was to port the controller to an Arduino, and use the Arduino to control a gas powered RC car. This allowed the simulation to be tested in the real world.}
         \resumeItem{}
-          {Interfaced optical encoders with the Arduino over I2C and used these to compute wheel velocity. Applied a digital filter to this.}
+          {Interfaced optical encoders with the Arduino over I2C to compute wheel velocity. Applied a digital filter to this.}
 		\resumeItem{}
           {Helped with the electrical design(microcontroller and sensors). Wrote a portion of the control system to feedback wheel velocity based on the encoder readings and drive the motors with PWM signals.}
       \resumeItemListEnd
@@ -180,13 +176,13 @@
       {AggiE-Challenge: }{Autonomous UAV that explored and mapped an unknown environment}
 	  \resumeItemListStart    
         \resumeItem{}
-          {Setup Robot Operating System (ROS) environment on the Raspberry Pi. Developed TCP socket code in Python to communicate between the Pi and a host machine. Later added ROS to the host machine to ease wireless communication and add SLAM capabilities.}
+          {Setup Robot Operating System(ROS) on the Raspberry Pi. Developed TCP socket code in Python to communicate with a host machine. Later added ROS to the host machine to ease wireless communication and SLAM.}
         \resumeItem{}
-          {Interfaced ArduPilot flight control system with the high level control system on the Pi over Serial. Developed control system on the Pi to relay sensor data from the ArduPilot to the relevant ROS nodes, switch between flight modes (altitude control, etc.), and drive the quadcopter with user input.}
+          {Interfaced ArduPilot flight control system with the high level controller on the Pi over Serial. Developed controller on the Pi to route ArduPilot sensor data, switch between flight modes, and drive the quadcopter with user input.}
         \resumeItem{}
-          {Wrote device driver in C to interface Lidar sensor with the Pi. Later ported to ROS to ease integration with the rest of the system.}
+          {Wrote device driver in C to interface LiDAR sensor with the Pi. Later ported to ROS to ease system integration.}
         \resumeItem{}
-          {Developed Python code using OpenCV to visualize real time IMU data as a 3D cube to represent the attitude of the quadcopter. This was used to analyze the IMU and design a filter.}
+          {Developed Python code to visualize real time IMU data as a 3D cube to represent the attitude of the quadcopter.}
 	  \resumeItemListEnd
 	  
 	\myResumeSubheading
@@ -195,9 +191,9 @@
         \resumeItem{}
           {Wrote serial communication drivers in Python and C to communicate between processors. Implemented memory mapped IPC to communicate between processes.}
         \resumeItem{}
-          {Sampled EKG sensor with ADC using timer interrupts and processed and filtered digital signal to determine heart rate information. Interfaced with LiDAR sensor over I2C to receive distance information for the control system. Utilized pin interrupts and Hall effect sensors to calculate wheel velocity.}
+          {Sampled EKG sensor with ADC to determine heart rate information. Interfaced LiDAR sensor over I2C to receive distance information. Utilized pin interrupts and Hall effect sensors to calculate wheel velocity.}
 		\resumeItem{}
-          {Developed a control system based on kinematic equations and EKG/LiDAR/Hall sensor inputs to send commands and alerts over the serial link to the bluetooth interface.}
+          {Developed a control system based on kinematic equations and sensor inputs to send alerts over the serial link to the bluetooth interface.}
 	  \resumeItemListEnd
 
   \resumeSubHeadingListEnd
